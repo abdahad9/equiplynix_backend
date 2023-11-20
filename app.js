@@ -18,7 +18,7 @@ app.use('/api', loginRoutes);
 
 // Other Routes
 app.get('/', (req, res) => {
-    res.json({ message: process.env.JWT_SECRET_ADMIN });
+    res.json({ message: process.env.DATABASE_URL });
   });
 
 app.use('/api', employeeRoutes);
