@@ -1,7 +1,7 @@
 // /src/controllers/employeeController.js
 
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const db = require('../db');
 
 class EmployeeController {

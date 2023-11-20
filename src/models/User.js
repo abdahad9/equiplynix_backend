@@ -1,4 +1,4 @@
-// const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const pgp = require('pg-promise')();
 const dbConfig = require('../db');
 
@@ -20,9 +20,9 @@ class User {
     // Implement database query to create a user
   }
 
-  // static async comparePasswords(candidatePassword, hashedPassword) {
-  //   return bcrypt.compare(candidatePassword, hashedPassword);
-  // }
+  static async comparePasswords(candidatePassword, hashedPassword) {
+    return bcrypt.compare(candidatePassword, hashedPassword);
+  }
 }
 
 module.exports = User;
