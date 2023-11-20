@@ -12,12 +12,13 @@ const dbd = {
 
 console.log('connectionString');
 console.log(connectionString);
-// const db = pgp(connectionString);
+// const db = pgp(cconnectionString);
 
 
 const db = pgp({
     connectionString,
     ssl: {
+        require: true,
       rejectUnauthorized: false, // You may need to adjust this based on your database setup
     },
   });
