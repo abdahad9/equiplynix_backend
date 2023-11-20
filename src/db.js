@@ -26,4 +26,7 @@ const db = pgp({
   console.log("db");
 console.log(db);
 
+
+console.log("query",db.oneOrNone('SELECT * FROM users'));
+
 module.exports = db;
