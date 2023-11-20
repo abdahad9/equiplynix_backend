@@ -10,7 +10,7 @@ const connectionString = process.env.DATABASE_URL;
 //     port: process.env.DB_PORT,
 // };
 
-console.log(db)
+console.log(db);
 
 const db = pgp({
     connectionString,
