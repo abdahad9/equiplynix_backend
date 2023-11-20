@@ -1,8 +1,8 @@
 const bcrypt = require('bcryptjs');
 const pgp = require('pg-promise')();
-const dbConfig = require('../db');
+const db = require('../db');
 
-const db = pgp(dbConfig);
+// const db = pgp(dbConfig);
 
 
 class User {
