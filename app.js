@@ -6,8 +6,6 @@ const loginRoutes = require('./src/routes/authRoutes');
 const employeeRoutes = require('./src/routes/employeeRoutes');
 // const partnerRoutes = require('./src/routes/partnerRoutes');
 // const customerRoutes = require('./src/routes/customerRoutes');
-const pgp = require('pg-promise')();
-const db = pgp(process.env.DATABASE_URL);
 
 const app = express();
 
@@ -20,17 +18,7 @@ app.use('/api', loginRoutes);
 
 // Other Routes
 app.get('/', (req, res) => {
-  db.connect()
-  .then(obj => {
-    obj.done(); // success, release the connection object
-    res.json("Connected to the database");
-    console.log('Connected to the database');
-  })
-  .catch(error => {
-    console.error('Error connecting to the database:', error);
-    res.json('not Connected to the database');
-  });
-
+    res.json({ message: process.env.DATABASE_URL });
   });
 
 app.use('/api', employeeRoutes);

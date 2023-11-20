@@ -9,4 +9,7 @@ const db = {
     port: process.env.DB_PORT,
 };
 
+console.log('hello');
+console.log(db);
+
 module.exports = db;
