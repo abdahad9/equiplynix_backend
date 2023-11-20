@@ -6,6 +6,7 @@ const loginRoutes = require('./src/routes/authRoutes');
 const employeeRoutes = require('./src/routes/employeeRoutes');
 // const partnerRoutes = require('./src/routes/partnerRoutes');
 // const customerRoutes = require('./src/routes/customerRoutes');
+const pgp = require('pg-promise')();
 const db = pgp(process.env.DATABASE_URL);
 
 const app = express();
