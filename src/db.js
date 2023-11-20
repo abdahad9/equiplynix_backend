@@ -15,7 +15,7 @@ console.log(db)
 const db = pgp({
     connectionString,
     ssl: {
-      rejectUnauthorized: false, // You may need to adjust this based on your database setup
+      rejectUnauthorized: true, // You may need to adjust this based on your database setup
     },
   });
 
