@@ -17,9 +17,9 @@ app.use(cors());
 app.use('/api', loginRoutes);
 
 // Other Routes
-// app.get('/api/test', (req, res) => {
-//     res.json({ message: 'API is working!' });
-//   });
+app.get('/api/test', (req, res) => {
+    res.json({ message: process.env.JWT_SECRET_ADMIN });
+  });
 
 app.use('/api', employeeRoutes);
 // app.use('/api', partnerRoutes);
