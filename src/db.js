@@ -12,15 +12,17 @@ const dbd = {
 
 console.log('connectionString');
 console.log(connectionString);
-const db = pgp(connectionString);
-console.log("db");
-console.log(db);
+// const db = pgp(connectionString);
 
-// const db = pgp({
-//     connectionString,
-//     ssl: {
-//       rejectUnauthorized: true, // You may need to adjust this based on your database setup
-//     },
-//   });
+
+const db = pgp({
+    connectionString,
+    ssl: {
+      rejectUnauthorized: false, // You may need to adjust this based on your database setup
+    },
+  });
+
+  console.log("db");
+console.log(db);
 
 module.exports = db;
