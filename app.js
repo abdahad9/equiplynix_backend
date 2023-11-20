@@ -17,7 +17,7 @@ app.use(cors());
 app.use('/api', loginRoutes);
 
 // Other Routes
-app.get('/api/test', (req, res) => {
+app.get('/', (req, res) => {
     res.json({ message: process.env.JWT_SECRET_ADMIN });
   });
 
