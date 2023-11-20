@@ -3,7 +3,7 @@ require('dotenv').config();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const loginRoutes = require('./src/routes/authRoutes');
-const employeeRoutes = require('./src/routes/employeeRoutes');
+// const employeeRoutes = require('./src/routes/employeeRoutes');
 // const partnerRoutes = require('./src/routes/partnerRoutes');
 // const customerRoutes = require('./src/routes/customerRoutes');
 
@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
     res.json({ message: process.env.JWT_SECRET_ADMIN });
   });
 
-app.use('/api', employeeRoutes);
+// app.use('/api', employeeRoutes);
 // app.use('/api', partnerRoutes);
 // app.use('/api', customerRoutes);
 
