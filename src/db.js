@@ -2,15 +2,15 @@ const pgp = require('pg-promise')();
 const { Pool } = require('pg');
 
 const connectionString = process.env.DATABASE_URL;
-// const db = {
-//     user: process.env.DB_USER,
-//     host: process.env.DB_HOST,
-//     database: process.env.DB_NAME,
-//     password: process.env.DB_PASSWORD,
-//     port: process.env.DB_PORT,
-// };
+const dbd = {
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
+};
 
-console.log(db);
+console.log(dbd);
 
 const db = pgp({
     connectionString,
